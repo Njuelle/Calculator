@@ -94,10 +94,10 @@ public class Calculator {
         if (checkNegativeNumbers(numbers)){
             return 0;
         }
-        if (Double.parseDouble(numbers[1]) == 0){
-            return 0;
+        if (Double.parseDouble(numbers[1]) != 0) {
+            return Double.parseDouble(numbers[0]) / Double.parseDouble(numbers[1]);
         }
-        return Double.parseDouble(numbers[0]) / Double.parseDouble(numbers[1]);
+        return 0;
     }
 
     /**
