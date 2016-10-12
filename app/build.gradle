@@ -24,7 +24,6 @@ android {
     }
 
 
-
 }
 
 sonarRunner {
@@ -33,7 +32,8 @@ sonarRunner {
         property "sonar.sources", "src" // Sources
         property "sonar.projectName", "Calculator" // Name of your project
         property "sonar.projectVersion", "0.2-SNAPSHOT" // Version of your project
-        property "sonar.projectDescription", "A wonderful project to analyse" // Description of your project
+        property "sonar.projectDescription", "A wonderful project to analyse"
+        // Description of your project
         property "sonar.profile", "Android Lint" // To use the profile Android Lint
         property "sonar.import_unknown_files", true // To allow Sonar to verify the XML's files
         property 'sonar.sourceEncoding', 'UTF-8'
@@ -44,6 +44,7 @@ sonarRunner {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
 }

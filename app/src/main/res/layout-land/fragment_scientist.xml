@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/sin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_text"
+            android:tag="sin"
+            android:text="SIN" />
+        <Button
+            android:id="@+id/cos"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_text"
+            android:tag="cos"
+            android:text="COS" />
+        <Button
+            android:id="@+id/tan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_text"
+            android:tag="tan"
+            android:text="TAN" />
+        <Button
+            android:id="@+id/X2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_text"
+            android:tag="x2"
+            android:text="X^2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/sin1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="sin-1"
+            android:textSize="@dimen/size_text"
+            android:text="SIN-1" />
+        <Button
+            android:id="@+id/cos1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="cos-1"
+            android:textSize="@dimen/size_text"
+            android:text="COS-1" />
+        <Button
+            android:id="@+id/tan1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="tan-1"
+            android:textSize="@dimen/size_text"
+            android:text="TAN-1" />
+        <Button
+            android:id="@+id/X3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="x3"
+            android:textSize="@dimen/size_text"
+            android:text="X3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/ex"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="ex"
+            android:textSize="@dimen/size_text"
+            android:text="E^X" />
+        <Button
+            android:id="@+id/x10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="x10"
+            android:textSize="@dimen/size_text"
+            android:text="1O^X" />
+        <Button
+            android:id="@+id/x1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="x1"
+            android:textSize="@dimen/size_text"
+            android:text="1/X" />
+        <Button
+            android:id="@+id/xy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="X"
+            android:textSize="@dimen/size_text"
+            android:text="X^Y" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/ln"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="ln"
+            android:textSize="@dimen/size_text"
+            android:text="LN" />
+        <Button
+            android:id="@+id/log"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="log"
+            android:textSize="@dimen/size_text"
+            android:text="LOG" />
+        <Button
+            android:id="@+id/sqr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="sqr"
+            android:textSize="@dimen/size_text"
+            android:text="SQR" />
+        <Button
+            android:id="@+id/neg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:tag="neg"
+            android:textSize="@dimen/size_text"
+            android:text="+/_" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,99 +1,72 @@
 package com.example.nico.calculator;
 
+import android.graphics.Color;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CalculTextView {
 
-    private Calculator calc = new Calculator();
     private TextView calculText;
+    private Button clearButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        calculText = (TextView)findViewById(R.id.calcul_text);
-        calculText.setText(calc.getSave());
-    }
 
-    /**
-     * add clicked number button value on textview
-     * @param v
-     */
-    public void onButtonClick(View v) {
-        String buttonValue = getButtonValue(v);
-        addText(buttonValue, calculText);
-    }
+        manageDrawer();
 
-    /**
-     * get clicked number button value
-     * @param v
-     * @return string
-     */
-    public String getButtonValue(View v) {
-        return  v.getTag().toString();
-    }
+        calculText = (TextView) findViewById(R.id.calcul_text);
+        setCalculText(Entry.getSave());
 
-    /**
-     * add text on targeted texview
-     * @param text
-     * @param target
-     */
-    public void addText(String text, TextView target) {
-        String originText = target.getText().toString();
-        if (originText.equals("0")){
-            target.setText(text);
-        } else {
-            target.setText(originText + text);
-        }
-        saveText(target.getText().toString());
-    }
+        clearButton = (Button) findViewById(R.id.clear);
+        clearButton.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setCalculText("0");
 
-    /**
-     * get result on textview when equal is clicked
-     * @param v
-     */
-    public void onResultClick(View v) {
-        double result = calc.calculate(calculText.getText().toString());
-        calculText.setText(Double.toString(result));
-    }
-
-    /**
-     * clear textview on clear button clicked
-     * @param v
-     */
-    public void onClearClick(View v) {
-        calculText.setText("0");
-        saveText("0");
-    }
-
-    /**
-     * on operator button clicked
-     * @param v
-     */
-    public void onOperatorClick(View v) {
-        String text = calculText.getText().toString();
-        String originText = calculText.getText().toString();
-        if (!originText.equals("0")){
-            if (calc.checkTwoNumbers(text)) {
-                double result = calc.calculate(text);
-                calculText.setText(Double.toString(result));
-                String buttonValue = getButtonValue(v);
-                addText(buttonValue, calculText);
-            } else {
-                String buttonValue = getButtonValue(v);
-                addText(buttonValue, calculText);
             }
-        }
+        });
     }
 
-    /**
-     * save textview value for orientation change
-     * @param text
-     */
-    public void saveText(String text) {
-        calc.setSave(text);
+    public void setCalculText(String text){
+        calculText.setText(text);
+        Entry.setSave(text);
     }
+
+    public String getOriginText() {
+        return calculText.getText().toString();
+    }
+
+    public void manageDrawer(){
+        final DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final LinearLayout leftDrawer = (LinearLayout) findViewById(R.id.left_drawer);
+
+        Button black = (Button) findViewById(R.id.black);
+        black.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculText.setBackgroundColor(Color.BLACK);
+                leftDrawer.setBackgroundColor(Color.BLACK);
+
+            }
+        });
+
+        Button blue = (Button) findViewById(R.id.blue);
+        blue.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculText.setBackgroundColor(Color.BLUE);
+                leftDrawer.setBackgroundColor(Color.BLUE);
+
+            }
+        });
+    }
+
 }

@@ -113,17 +113,6 @@ public class EspressoTest {
         onView(withId(R.id.calcul_text)).check(matches(withText("2.0")));
     }
 
-    @Test
-    public void manyAdditionIsCorrect() {
-        onView(withId(R.id.clear)).perform(click());
-        onView(withId(R.id.b1)).perform(click());
-        onView(withId(R.id.add)).perform(click());
-        onView(withId(R.id.b1)).perform(click());
-        onView(withId(R.id.add)).perform(click());
-        onView(withId(R.id.b1)).perform(click());
-        onView(withId(R.id.eq)).perform(click());
-        onView(withId(R.id.calcul_text)).check(matches(withText("3.0")));
-    }
 
     @Test
     public void simpleSubtractionIsCorrect() {
@@ -135,17 +124,6 @@ public class EspressoTest {
         onView(withId(R.id.calcul_text)).check(matches(withText("4.0")));
     }
 
-    @Test
-    public void ManySubtractionIsCorrect() {
-        onView(withId(R.id.clear)).perform(click());
-        onView(withId(R.id.b5)).perform(click());
-        onView(withId(R.id.min)).perform(click());
-        onView(withId(R.id.b1)).perform(click());
-        onView(withId(R.id.min)).perform(click());
-        onView(withId(R.id.b1)).perform(click());
-        onView(withId(R.id.eq)).perform(click());
-        onView(withId(R.id.calcul_text)).check(matches(withText("3.0")));
-    }
 
     @Test
     public void simpleMutiplicationIsCorrect() {
@@ -157,17 +135,7 @@ public class EspressoTest {
         onView(withId(R.id.calcul_text)).check(matches(withText("4.0")));
     }
 
-    @Test
-    public void manyMutiplicationIsCorrect() {
-        onView(withId(R.id.clear)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.mult)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.mult)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.eq)).perform(click());
-        onView(withId(R.id.calcul_text)).check(matches(withText("8.0")));
-    }
+
 
     @Test
     public void simpleDivisionIsCorrect() {
@@ -179,17 +147,7 @@ public class EspressoTest {
         onView(withId(R.id.calcul_text)).check(matches(withText("3.0")));
     }
 
-    @Test
-    public void manyDivisionIsCorrect() {
-        onView(withId(R.id.clear)).perform(click());
-        onView(withId(R.id.b8)).perform(click());
-        onView(withId(R.id.div)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.div)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.eq)).perform(click());
-        onView(withId(R.id.calcul_text)).check(matches(withText("2.0")));
-    }
+
 
     @Test
     public void divisionByZero() {
@@ -202,21 +160,6 @@ public class EspressoTest {
     }
 
 
-    @Test
-    public void manyOperationIsCorrect() {
-        onView(withId(R.id.clear)).perform(click());
-        onView(withId(R.id.b8)).perform(click());
-        onView(withId(R.id.mult)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.div)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.add)).perform(click());
-        onView(withId(R.id.b4)).perform(click());
-        onView(withId(R.id.min)).perform(click());
-        onView(withId(R.id.b2)).perform(click());
-        onView(withId(R.id.eq)).perform(click());
-        onView(withId(R.id.calcul_text)).check(matches(withText("10.0")));
-    }
 
     @Test
     public void beginByOperator() {
